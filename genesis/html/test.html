@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Genesis Block</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->	
+	<!-- Montserrat, Quicksand font included -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CQuicksand" rel="stylesheet">
+	<!-- font-family: 'Quicksand', sans-serif; font-family: 'Montserrat', sans-serif; -->
+	<!-- modernizr included -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<style>
+		body{
+			background-color: #fff;
+		}  
+		.render-blk{ opacity:0; }
+	</style>
+	<script>
+		var cssArr = ['css/app.css'];
+		for(var i = 0; i < cssArr.length; i++) {
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('type', 'text/css');
+			link.setAttribute('href', cssArr[i]);
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+	<noscript>
+		<style media="screen">
+			.render-blk{ opacity: 1; }	
+		</style>
+	</noscript>
+</head>
+	<body>
+		<div class="render-blk">
+			<div class="dash-board-blk">
+				<!-- Top Nav -->
+				<div class="top-nav">
+					<nav class="">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">Genesis Block</a>
+							</div>
+							<!-- <ul class="nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">Page 1</a></li>
+								<li><a href="#">Page 2</a></li>
+								<li><a href="#">Page 3</a></li>
+							</ul> -->
+						</div>
+					</nav>
+				</div>
+				<!-- Top Nav -->
+				<div class="main-content">
+					<div class="container">
+						<div class="row">
+							<div class="form-row checkboxradio">
+								<div class="checkboxradio-row">
+								<input class="checkboxradio-item checkboxradio-invisible" name="checkgroup" id="checkbox1" type="checkbox" checked />
+								<label class="checkboxradio-label checkbox-label" for="checkbox1">Checkbox active</label>
+								</div>
+								<div class="checkboxradio-row">
+								<input class="checkboxradio-item checkboxradio-invisible" name="checkgroup" id="checkbox2" type="checkbox" />
+								<label class="checkboxradio-label checkbox-label" for="checkbox2">Checkbox inactive</label>
+								</div>
+							</div>
+							<div class="form-row checkboxradio">
+								<div class="checkboxradio-row">
+									<!-- <input class="checkboxradio-item checkboxradio-invisible" name="radiogroup" id="radiobutton1" type="radio" checked/> -->
+									<input class="checkboxradio-item checkboxradio-invisible" type="radio" id="radio-known" value="1" name="radio-knownGroup" />
+
+									<label class="checkboxradio-label radio-label" for="radio-known">Known Issue</label>
+
+									<input class="checkboxradio-item checkboxradio-invisible" type="radio" id="radio-unknown" value="1" name="radio-knownGroup" />
+
+									<label class="checkboxradio-label radio-label" for="radio-unknown">Unknown Issue</label>
+								</div>
+								<div class="checkboxradio-row">
+								<input class="checkboxradio-item checkboxradio-invisible" name="radiogroup" id="radiobutton2" type="radio" />
+								<label class="checkboxradio-label radio-label" for="radiobutton2">Radio button inactive</label>
+								</div>
+							</div>
+							<div class="button-row">
+								<a href="#" class="button">primary button</a>
+								<a href="#" class="button button-primary">secondary button</a>
+							</div>
+
+							<!-- <input type="radio" id="radio-known" value="1" name="radio-knownGroup" />Known Issue
+							<input type="radio" id="radio-unknown" value="2" name="radio-knownGroup"/> Unknown Issue<br/> -->
+							
+							<div id="known-issue" class="vehicle-issue">
+								Hai Known Issue
+							</div>	
+							<div id="unknown-issue" class="vehicle-issue">
+								Haui unKnown Issue
+							</div>	
+						</div>
+					</div>
+					
+				</div>	
+
+				<!-- Body Content -->
+			
+			<!-- Body Content -->
+			</div>
+		</div>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+	  	<script>
+	  		//nprogress init
+	        NProgress.configure({ showSpinner: false }).start();
+	  	</script>
+	  	<script>
+		  	var jsArr = ['js/wow.js','js/app.js'];
+			for(var j = 0; j < jsArr.length; j++) {
+		        var script = document.createElement('script')
+		        script.setAttribute('type', 'text/javascript')
+		        script.setAttribute('src', jsArr[j])
+		        document.getElementsByTagName('head')[0].appendChild(script)
+		    }
+	    </script>
+	</body>
+</html>

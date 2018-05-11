@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Genesis Block</title>
+	<title>Genesis Block | Sign In</title>
 	<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->	
-	<!-- Montserrat, Quicksand font included -->
+	<!-- Montserrat & Quicksand font included -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CQuicksand" rel="stylesheet">
 	<!-- font-family: 'Quicksand', sans-serif; font-family: 'Montserrat', sans-serif; -->
-	<!-- modernizr included -->
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<style>
 		body{
@@ -36,24 +36,50 @@
 </head>
 	<body>
 		<div class="render-blk">
-			<div class="dash-board-blk">
-				<!-- Top Nav -->
-				<div class="top-nav">
-					
+			<header class="header-auth">
+				<a class="nav-link text-center" href="#!"><!-- <img class="logo-img" src="img/logo-full.png" alt="logo"> --><h1>Genesis Block</h1></a>
+			</header>
+			<div class="auth-page">
+				<div class="container auth-page-container">
+					 	<h1>Sign in to your account</h1>
+					   <div class="col-5 center-block ">
+				    		<div class="global-error-message">Your password is incorrect</div>
+					      <div class="form-wrap card card-box">
+								<form id="sign-in-form" method="post" >
+									<div class="form-row">
+										<label class="floating-item" data-error="Please enter Username">
+										<input type="text" name="username" class="floating-item-input input-item">
+										  <span class="floating-item-label">Username</span>
+										</label>				           
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="Please enter Password">
+										<input type="password" name="password" class="floating-item-input input-item">
+										  <span class="floating-item-label">Password</span>
+										</label>
+									</div>
+									<div class="form-row checkboxradio custom-form-row">
+										<div class="checkboxradio-row">
+											<input class="checkboxradio-item checkboxradio-invisible checkbox-blue" id="checkbox1" name="checkgroup" type="checkbox" >
+											<label class="checkboxradio-label checkbox-label" for="checkbox1">Keep me signed in</label>
+										</div>
+										<a href="forgot.html" class="forgotPwd">Forgot password ?</a>
+									</div>
+									<div class="form-row">
+										<button type="submit" class="button">Sign In</button>          
+									</div>
+								</form>
+					      </div>
+					    </div>	
 				</div>
-				<!-- Top Nav -->
-
-				<!-- Body Content -->
-			
-			<!-- Body Content -->
 			</div>
 		</div>
 	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-	  	<script>
+	  	<script >
 	  		//nprogress init
 	        NProgress.configure({ showSpinner: false }).start();
 	  	</script>
-	  	<script>
+	  	<script >
 		  	var jsArr = ['js/wow.js','js/app.js'];
 			for(var j = 0; j < jsArr.length; j++) {
 		        var script = document.createElement('script')
@@ -61,6 +87,8 @@
 		        script.setAttribute('src', jsArr[j])
 		        document.getElementsByTagName('head')[0].appendChild(script)
 		    }
+
+		    
 	    </script>
 	</body>
 </html>

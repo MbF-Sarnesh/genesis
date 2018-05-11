@@ -11656,6 +11656,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @charset "UTF-8";
+/*$button-hover:#43C3EF;*/
 /*$purple: #2D2D72;*/
 /*$blue: #29B2EF;*/
 /*$pictonblue:#2ab2f0;*/
@@ -11788,7 +11789,7 @@ input:focus {
   outline: none; }
 
 body {
-  background: #303040;
+  background: #fff;
   color: #474047;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -11883,7 +11884,7 @@ h6 {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in; }
   .button:hover, .button:focus, button:hover, button:focus {
-    background-color: #43C3EF;
+    background-color: #01a479;
     color: #fff; }
   .button-primary, button-primary {
     max-width: inherit; }
@@ -13999,7 +14000,7 @@ select {
   align-items: center;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  padding: 14px 20px 14px 245px;
+  padding: 14px 20px;
   position: fixed;
   left: 0px;
   top: 0;
@@ -14959,3 +14960,55 @@ nav {
 
 .topology-box .portlet-footer {
   padding: 0; }
+
+.top-nav {
+  position: unset; }
+  .top-nav nav {
+    width: 100%; }
+  .top-nav .container-fluid {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+  .top-nav .navbar-header a {
+    color: white; }
+
+.main-content {
+  padding-top: 85px;
+  position: relative; }
+  .main-content .home-banner {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .main-content .tabs {
+    position: relative; }
+  .main-content .tab-link {
+    padding: 20px 50px;
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold; }
+    .main-content .tab-link.current {
+      background-color: #fff;
+      color: #0b0b0b; }
+
+.vehicle-issue {
+  display: none; }
+
+/*TABS STYLE*/
+.tab-content {
+  display: none;
+  width: 100%; }
+
+.tab-content.current {
+  display: block;
+  transition: all 0.9s ease-out 0s; }
+
+/*form label error*/
+label .error {
+  color: #e42828; }

@@ -14,7 +14,44 @@
             _vulnerabilitySlider();  
             _complianceSlider();
             _mostactivetrafficSlider();
+            _radioOnchange();
+            _tabPanel();
+            _loginFormvalidate();
          },
+         _loginFormvalidate=function(){
+            $("#sign-in-form").validate({
+              rules: {
+                  "username": {
+                      required: true
+                  },
+                  "password": {
+                      required: true
+                  }
+              },
+              messages: {
+                  "username": {
+                      required: "Please, enter a name"
+                  },
+                  "password": {
+                      required: "Please, enter a password",
+                  }
+              },
+              submitHandler: function (form) { // for demo
+                  alert('valid form submitted'); // for demo
+                  return false; // for demo
+              }
+          });
+         },
+         //Tab Panel
+          _tabPanel = function(){ 
+           
+            
+            $('ul.tabs li').click(function(){            
+              var tab_id = $(this).attr('data-tab');     
+              $(this).addClass('current').siblings().removeClass('current');              
+              $('#'+tab_id).addClass('current').siblings().removeClass('current');              
+            });
+          },
         _wowAnimated = function() {
           var wow = new WOW(
             {
@@ -151,7 +188,18 @@
                     swipe:true,
                 });
         },
-
+        _radioOnchange=function(){
+              $("input[name=radio-knownGroup]:radio").change(function () {
+                  if ($("#radio-known").is(":checked")) {
+                      $('#known-issue').show();
+                      $('#unknown-issue').hide();
+                  }
+                  else {
+                      $('#known-issue').hide();
+                      $('#unknown-issue').show();
+                  }
+              })
+        },
         _commenEvents = function() {
             // Add common js here
 

@@ -1,0 +1,57 @@
+.top-nav{
+	position: unset;
+	nav{
+		width:100%;
+	}
+	.container-fluid{
+		@include display-flex();
+		@include justify-content(space-between);
+	}
+	.navbar-header{
+		a{
+			color: white;
+		}
+	}
+}
+.main-content{
+	padding-top: 85px;
+	position: relative;
+	.home-banner{
+		@include position(absolute, $top: 0, $right: null, $bottom: null, $left: 0);
+	}
+	.tabs{
+		position: relative;
+	}
+	.tab-link{
+		padding: 20px 50px;
+	    display: inline-block;
+	    border: 2px solid white;
+	    color: white;
+	    @include border-radius(5px);
+    	font-weight: bold;
+    	&.current{
+    		background-color: $white;
+    		color: $black;
+    	}
+	}
+}
+.vehicle-issue{
+	display: none;
+}
+
+/*TABS STYLE*/
+.tab-content{
+	display: none;  	
+	width: 100%;	
+}
+
+.tab-content.current{
+	display: block;
+	transition: all 0.9s ease-out 0s;
+}
+/*form label error*/
+label{
+	.error{
+		color: $pink;
+	}
+} 
