@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Genesis Block | Topology</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->	
+	<!-- Montserrat, Quicksand font included -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CQuicksand" rel="stylesheet">
+	<!-- font-family: 'Quicksand', sans-serif; font-family: 'Montserrat', sans-serif; -->
+	<!-- modernizr included -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<style>
+		body{
+			background-color: #fff;
+		}  
+		.render-blk{ opacity:0; }
+	</style>
+	<script>
+		var cssArr = ['css/app.css'];
+		for(var i = 0; i < cssArr.length; i++) {
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('type', 'text/css');
+			link.setAttribute('href', cssArr[i]);
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+	<noscript>
+		<style media="screen">
+			.render-blk{ opacity: 1; }	
+		</style>
+	</noscript>
+</head>
+	<body>
+		<div class="render-blk">
+			<div class="dash-board-blk">
+				<!-- Top Nav -->
+				<div class="top-nav">
+					<div class="navigation-wrapper">
+						<div class="navigation-block">
+							<div class="icon-holder">
+								<i class="fa fa-arrow-left"></i>
+							</div>
+							<div class="icon-holder">
+								<i class="fa fa-arrow-right"></i>
+							</div>
+							<div class="icon-holder" id="search-trigger">
+								<i class="fa fa-search"></i>
+							</div>
+						</div>
+						<div class="search-block">
+							<i class="fa fa-times search-elements" id="search-close"></i>
+							<input type="text" name="search" class="search-box search-elements" placeholder="Search the portal">
+							<input type="submit" name="submit" value="Search" class="search-submit search-elements">
+						</div>
+					</div>
+					<div class="user-block">
+						<div class="user-elements">
+							<ul>
+								<li>10</li>
+								<li>99+</li>
+								<li>24</li>
+								<li>6</li>
+							</ul>
+						</div>
+						<div class="user-card">
+							<img src="img/profile.png" alt="profile">
+							<h6>Kaus peters <span>Admin</span></h6>
+						</div>
+						<div class="menu-trigger">
+							<span> <!-- menu --> &nbsp; <!-- trigger --> </span>
+							<span> <!-- menu --> &nbsp; <!-- trigger --> </span>
+							<span> <!-- menu --> &nbsp; <!-- trigger --> </span>
+						</div>
+					</div>
+				</div>
+				<!-- Top Nav -->
+
+				<!-- Left Nav -->
+				<div class="left-nav">
+					<div class="top-menu">
+						<div class="logo">
+							<a href="#" class="logo-full"><img src="img/logo-full.png" alt="logo"></a>
+							<a href="#" class="logo-icon"><img src="img/logo.png" alt="logo"></a>
+						</div>
+						<nav>
+							<ul class="main-menu">
+								<li>
+									<a href="javascript:void(0)" class="direct-menu active" data-tab="tab-1">
+										<span>Direct</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="predict-menu" data-tab="tab-2">
+										<span>Predict</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="act-menu"  data-tab="tab-3">
+										<span>Act</span>
+									</a>
+								</li>								
+							</ul>
+							<hr class="nav-breakline" />
+							<ul class="secondary-menu current"  id="tab-1">
+								<li>
+									<a href="javascript:void(0)" class="topology-menu active">
+										<span>Topology</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="apps-menu">
+										<span>Apps</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="assets-menu">
+										<span>Assets</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="issues-menu">
+										<span>Issues</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="secondary-menu"  id="tab-2">
+								<li>
+									<a href="javascript:void(0)" class="topology-menu">
+										<span>Topology 2</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="apps-menu">
+										<span>Apps 2</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="assets-menu">
+										<span>Assets 2</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="issues-menu">
+										<span>Issues 2</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="secondary-menu"  id="tab-3">
+								<li>
+									<a href="javascript:void(0)" class="topology-menu">
+										<span>Topology 3</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="apps-menu">
+										<span>Apps 3</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="assets-menu">
+										<span>Assets 3</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="issues-menu">
+										<span>Issues 3</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="bottom-menu">
+						<nav>
+							<ul>
+								<li>
+									<a href="#" data-title="History" class="tooltipCustom">
+										<i class="fa fa-history"></i>
+										<span>History</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-title="Help" class="tooltipCustom">
+										<i class="fa fa-question-circle"></i>
+										<span>Help</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-title="Settings" class="tooltipCustom">
+										<i class="fa fa-cog"></i>
+										<span>Settings</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-title="Logout" class="tooltipCustom">
+										<i class="fa fa-power-off"></i>
+										<span>Logout</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<i class="fa fa-angle-double-left drawer-trigger" id="drawer-trigger"></i>
+					</div>
+				</div>
+				<!-- Left Nav -->
+
+				<!-- Body Content -->
+				<div class="board-content topology">
+					<div class="board-inner">
+						<div class="board-top-container">											
+							<div class="row">
+								<div class="col-7 body-left">
+									<div class="portlet topology-box">
+										<div class="portlet-header">
+											<a class="portlet-toggle" href="javascript:void(0);">
+											    <i class="fa fa-minus minus-icon" aria-hidden="true"></i>
+											</a>
+												
+											<h3>Topology</h3>									
+											<i class="fa fa-bars bar-icon" aria-hidden="true"></i>						
+										</div>
+										<div class="portlet-body">
+											<div class="topology-image">
+												<img class="img-fluid mx-auto d-block" src="img/topology.jpg" alt="topology">
+											</div>										
+										</div>
+										<div class="portlet-footer">
+											<i class="fa fa-expand expand-icon" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+								<div class="col-5 body-right">								
+									<div class="portlet">
+										<div class="portlet-header">
+											<a class="portlet-toggle" href="javascript:void(0);">
+											    <i class="fa fa-minus minus-icon" aria-hidden="true"></i>
+											</a>
+											<h3>most active traffic</h3>
+										</div>
+										<div class="portlet-body">
+											<div class="mostactivetraffic-slide">
+												<div>
+													<img class="img-fluid mx-auto d-block" src="img/topology-graph.jpg" alt="topology-graph1">
+												</div>
+												<div>
+													<img class="img-fluid mx-auto d-block" src="img/topology-graph.jpg" alt="topology-graph2">
+												</div>												
+											</div>
+										</div>
+									</div>
+									<div class="portlet topology-issues">
+										<div class="portlet-header">
+											<a class="portlet-toggle open" href="javascript:void(0);">
+											    <i class="fa fa-minus minus-icon" aria-hidden="true"></i>
+											</a>
+											<h3>Issues</h3>
+											<div class="select-row">
+						                        <select class="select-menu" name="report" id="report">
+						                       		<option value="last 1h" >last 1h</option>
+						                        	<option value="last 6h" >last 6h</option>
+						                            <option value="last 12h" >last 12h</option>
+						                            <option value="last 24h" selected>last 24h</option>
+						                        </select>
+						                    </div>										
+										</div>
+										<div class="portlet-body">
+											<div class="row vdivider">
+												<div class="col-6">
+													<div class="portlet-body-content">
+														<h6>flows intra</h6>
+														<div class="graph-data purple">20</div>
+														<p class="green">+ 2% </p>
+													</div>
+												</div>
+												<div class="col-6">
+												    <div class="portlet-body-content">
+														<h6>flows inter</h6>
+														<div class="graph-data purple">4</div>							
+														<p class="green">+ 5% </p>
+													</div> 
+												</div>
+											</div> 
+											<hr>
+											<div class="row vdivider traffic-row">
+												<div class="col-6">													
+													<div class="portlet-body">
+														<div class="row vdivider">
+															<h6>Total Traffic</h6>
+															<div class="col-6">		
+																<div class="portlet-body-content">
+																	<div class="issue-graph-data purple">3,250</div>
+																	<p> Packets</p>
+																</div>
+															</div>
+															<div class="col-6">
+															    <div class="portlet-body-content">
+																	<div class="issue-graph-data purple">523,250</div>
+																	<p> Bytes</p>
+																</div> 
+															</div>
+														</div> 
+													</div>
+												</div>
+												<div class="col-6">
+												    <div class="portlet-body">
+														<div class="row vdivider">
+															<h6>Lateral Traffic</h6>
+															<div class="col-6">		
+																<div class="portlet-body-content">
+																	<div class="issue-graph-data purple">49.4%</div>
+																	<p> Packets</p>
+																</div>
+															</div>
+															<div class="col-6">
+															    <div class="portlet-body-content">
+																	<div class="issue-graph-data purple">54.6%</div>
+																	<p> Bytes</p>
+																</div> 
+															</div>
+														</div> 
+													</div> 
+												</div>
+											</div> 
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>					
+						<div class="board-middle-container">
+							<div class="row row-eq-height">
+								<div class="col-12">
+									<div class="portlet">
+										<div class="portlet-header">
+											<a class="portlet-toggle" href="javascript:void(0);">
+											    <i class="fa fa-minus minus-icon" aria-hidden="true"></i>
+											</a>
+											<h3>Metrics</h3>									
+										</div>
+										<div class="portlet-body">
+											<div class="row vdivider">
+												<div class="col">
+													<div class="portlet-body-content">
+														<h6>Locations</h6>
+														<div class="graph-data purple">5</div>
+														<p class="green">+ 3% Change</p>
+														<div class="select-flex">
+															<div class="select-row">
+										                        <select class="select-menu" name="metric-report1" id="metric-report1">
+										                        	<option value="daily" >daily</option>
+										                            <option value="weekly" selected>weekly</option>
+										                            <option value="monthly">monthly</option>
+										                            <option value="yearly">yearly</option>
+										                        </select>
+										                    </div>
+														</div>														
+													</div>
+												</div>
+												<div class="col">
+												    <div class="portlet-body-content">
+														<h6>Organisations</h6>
+														<div class="graph-data purple">50</div>
+														<p class="green">+ 3% Change</p>
+														<div class="select-flex">
+															<div class="select-row">
+										                        <select class="select-menu" name="metric-report2" id="metric-report2">
+										                        	<option value="daily" >daily</option>
+										                            <option value="weekly" selected>weekly</option>
+										                            <option value="monthly">monthly</option>
+										                            <option value="yearly">yearly</option>
+										                        </select>
+										                    </div>
+														</div>	
+													</div> 
+												</div>
+												<div class="col">
+													<div class="portlet-body-content">
+														<h6>Applications</h6>
+														<div class="graph-data purple">230</div>
+														<p class="red">+ 2% Change</p>
+														<div class="select-flex">
+															<div class="select-row">
+										                        <select class="select-menu" name="metric-report3" id="metric-report3">
+										                        	<option value="daily" >daily</option>
+										                            <option value="weekly" selected>weekly</option>
+										                            <option value="monthly">monthly</option>
+										                            <option value="yearly">yearly</option>
+										                        </select>
+										                    </div>
+														</div>	
+													</div>
+												</div>
+												<div class="col">
+												    <div class="portlet-body-content">
+														<h6>Assets</h6>
+														<div class="graph-data purple">5000</div>
+														<p class="green">+ 5% Change</p>
+														<div class="select-flex">
+															<div class="select-row">
+										                        <select class="select-menu" name="metric-report4" id="metric-report4">
+										                        	<option value="daily" >daily</option>
+										                            <option value="weekly" selected>weekly</option>
+										                            <option value="monthly">monthly</option>
+										                            <option value="yearly">yearly</option>
+										                        </select>
+										                    </div>
+														</div>	
+													</div> 
+												</div>
+												<div class="col">
+													<div class="portlet-body-content">
+														<h6>Threads</h6>
+														<div class="graph-data purple">39</div>
+														<p class="green">+ 6% Change</p>
+														<div class="select-flex">
+															<div class="select-row">
+										                        <select class="select-menu" name="metric-report5" id="metric-report5">
+										                        	<option value="daily" >daily</option>
+										                            <option value="weekly" selected>weekly</option>
+										                            <option value="monthly">monthly</option>
+										                            <option value="yearly">yearly</option>
+										                        </select>
+										                    </div>
+														</div>	
+													</div>
+												</div>
+											</div> 
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Body Content -->
+			</div>
+		</div>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+	  	<script>
+	  		//nprogress init
+	        NProgress.configure({ showSpinner: false }).start();
+	  	</script>
+	  	<script>
+		  	var jsArr = ['js/wow.js','js/app.js'];
+			for(var j = 0; j < jsArr.length; j++) {
+		        var script = document.createElement('script')
+		        script.setAttribute('type', 'text/javascript')
+		        script.setAttribute('src', jsArr[j])
+		        document.getElementsByTagName('head')[0].appendChild(script)
+		    }
+	    </script>
+	</body>
+</html>

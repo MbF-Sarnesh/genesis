@@ -1,0 +1,500 @@
+@include input-placeholder {
+	color: $grey;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+.dash-board-blk {
+	position: relative;
+}
+.logo {
+	padding: 20px;
+	@include position(absolute, $top: 0, $right: null, $bottom: null, $left: 0px);
+	a {
+		display: block;
+		@include transition-property(all);
+	    @include transition-duration(0.3s);
+	    @include transition-timing-function(ease-in);
+	    @include transition-delay(0.3s);
+	}
+}
+.logo-full {
+	opacity: 1;
+	@include width-height(auto, auto);
+}
+.logo-icon {
+	opacity: 0;
+	@include width-height(0, 0);
+}
+.top-nav {
+	background-color: $darkPurple;
+	border-bottom: solid 4px $blue;
+	color: $white;
+	@include display-flex;
+	@include align-items(center);
+	@include justify-content(space-between);
+	padding: 14px 20px 14px 245px;
+	position: fixed;
+	left: 0px;
+	top: 0;
+	width: 100%;
+	z-index:1;
+
+	@include transition-property(all);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease-in);
+}
+.icon-holder {
+	background-color: $hoverPurple;
+	@include border-radius(100%);
+	color: $lightPurple;
+	cursor: pointer;
+	display: inline-flex;
+	@include justify-content(center);
+	@include align-items(center);
+	@include width-height(35px, 35px);
+	text-align: center;
+	font-size: 18px;
+	&:last-child {
+		margin-left:16px;
+	}
+	&:hover {
+		color: $white;
+	}
+}
+.navigation {
+	&-wrapper {
+		position: relative;
+	}
+}
+/* Search block start */
+.search {
+	&-block {
+		background-color: $white;
+		@include border-radius(35px);
+		display: none;
+		font-weight: 400;
+		font-size: $font-xs;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		@include width-height(35px, 35px);
+		@include position(absolute, $top: 0, $right: null, $bottom: null, $left: 40px);
+
+		@include transition-property(width);
+	    @include transition-duration(0.6s);
+	    @include transition-timing-function(ease-out);
+	    @include transition-delay(0.3s);
+		i.fa {
+			color:$grey;
+			cursor: pointer;
+			font-size: 18px;
+			padding:8px 15px;
+			@include position(absolute, $top: 0, $right: null, $bottom: null, $left: 0);
+			z-index: 1;
+		}
+		.search-elements{
+			opacity: 0;
+
+			@include transition-property(opacity);
+		    @include transition-duration(0.3s);
+		    @include transition-timing-function(ease-out);
+		    @include transition-delay(1s);
+		    &.active {
+				opacity: 1;
+			}
+
+		}
+		&.active {
+			width: 418px;
+		}
+	}
+	&-box, &-submit {
+		background-color: transparent;
+		border: none;
+		letter-spacing: 1px;
+		outline: none;
+	}
+	&-box {
+		font-size: $font-sm;
+		font-weight: 400;
+		padding: 0 72px 0 50px;
+		@include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+		@include width-height(100%, 100%);
+	}
+	&-submit {
+		color: $blue;
+		cursor: pointer;
+		font-size: $font-xs;
+		height: 100%;
+		text-transform: uppercase;
+		padding: 0 20px 0 10px;
+		@include position(absolute, $top: 0, $right: 0, $bottom: null, $left: null);
+		z-index: 1;
+	}
+}
+#search-trigger {
+	position: relative;
+	left: 0;
+
+	@include transition-property(all);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease-in);
+
+    &.active {
+		background-color: $white;
+		color: $white;
+		left: -52px;
+	}
+}
+/* Search block end */
+
+.user {
+	&-block>div {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&-elements {
+		li {
+			background-color: $red;
+			@include border-radius(100%);
+			display: inline-block;
+			font-size: 9px;
+			margin-left: -6px;
+			padding:1px 2px;
+			@include width-height(25px, 25px);
+			text-align: center;
+			&:nth-child(2n) {
+				background-color: $orange;
+			}
+			&:nth-child(3n) {
+				background-color: $yellow;
+			}
+			&:nth-child(4n) {
+				background-color: $green;
+			}
+		}
+	}
+	&-card {
+		img {
+			@include border-radius(100%);
+			@include width-height(48px, 48px);
+			margin-left: 15px;
+		}
+		h6 {
+			display: inline-block;
+			color: $white;
+			font-size: $font-xs;
+			font-weight: 400;
+			letter-spacing: 1px;
+			line-height: 16px;
+			padding:8px 0 0 12px;
+			text-transform: uppercase;
+			vertical-align: middle;
+			span {
+				color: $lightPurple;
+				display: block;
+				font-weight: 300;
+			}
+		}
+	}
+}
+.menu-trigger {
+	cursor: pointer;
+	padding: 15px;
+	margin-left: 25px;
+	& > span {
+		background-color: $blue;
+		display: block;
+		margin-bottom: 3px;
+		@include width-height(16px, 2px);
+	}
+}
+.left-nav {
+	background-color: $sideNavPurple;
+	color: $white;
+	@include display-flex;
+  	@include flex-direction(column);
+  	@include justify-content(space-between);
+	font: {
+		family:$font-Montserrat;
+		size:10px;
+	};
+	font-weight:400;
+	position: fixed;
+	text-transform: uppercase;
+	@include width-height(220px, 100%);
+	z-index:2;
+
+	@include transition-property(all);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease-in);
+}
+
+nav {
+	position: relative;
+	li a {
+		color: $lightPurple;
+		display: block;
+		position: relative;
+		font: {
+			family:$font-Montserrat;
+			size:10px;
+		};
+		font-weight:400;
+		padding: 7px 20px;
+		img {
+			width: 25px;
+		}
+		span {
+			padding-left: 20px;
+		}
+		&:hover, &:focus, &.active {
+			background-color: $hoverPurple;
+			color: $white;
+		}
+		i.fa {
+			font-size: 24px;
+			vertical-align: middle;
+		}
+
+		@include transition-property(all);
+	    @include transition-duration(0.3s);
+	    @include transition-timing-function(ease-in);
+	    &:after {
+	    		content:"";
+	    		@include position(absolute, $top: 50%, $right: null, $bottom: null, $left: 0);
+	    		@include transform(translateY(-50%));
+	    		background-color: $blue;
+	    		@include width-height(2px, 0%);
+	    		@include transition-property(all);
+			    @include transition-duration(0.3s);
+			    @include transition-timing-function(ease-in);
+	    }
+	    &.active {
+	    	&:after {
+	    		@include width-height(2px, 100%);
+	    	}
+	    }
+	}
+}
+
+.top-menu {
+	padding-top: 105px;
+	nav {
+		li {
+			a {
+				margin-bottom: 0px;
+				padding: 10px 20px 10px 45px;
+				position: relative;
+				&:before {
+					content:"";
+					background: url("/html/img/sprite.png") no-repeat left top;
+					@include width-height(27px, 30px);
+					background-size: 100px;
+					@include position(absolute, $top: 50%, $right: null, $bottom: null, $left: 20px);
+					@include translateY(-50%);
+				}
+				&.direct-menu {
+					&:before {
+						background-position: -50px 0px;
+					}
+				}
+				&.predict-menu {
+					&:before {
+						background-position: -50px -50px;
+					}
+				}
+				&.act-menu {
+					&:before {
+						background-position: -50px -100px;
+					}
+				}
+				&.topology-menu {
+					&:before {
+						background-position: -50px -150px;
+					}
+				}
+				&.apps-menu {
+					&:before {
+						background-position: -50px -200px;
+					}
+				}
+				&.assets-menu {
+					&:before {
+						background-position: -50px -250px;
+					}
+				}
+				&.issues-menu {
+					&:before {
+						background-position: -50px -300px;
+					}
+				}
+				&:hover, &:focus, &.active {
+					background-color: $hoverPurple;
+					&:before {
+						background-position-x: 0px !important;
+					}
+				}
+				span {
+					@include transition-property(all);
+				    @include transition-duration(0.3s);
+				    @include transition-timing-function(ease-in);
+				}
+			}
+		}		
+		.nav-breakline{
+			border-top: 1px solid $navBreakline;
+		}
+		.secondary-menu{
+			display: none;
+			&.current{
+				display: inherit;
+			}
+		}
+	}
+}
+.bottom-menu {
+	position: relative;
+	.drawer-trigger {
+		color: $lightPurple;
+		cursor: pointer;
+		font-size: 24px;
+		padding: 12px;
+
+		@include transition-property(all);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease-in);
+
+		@include position(absolute, $top: null, $right: 0, $bottom: 26px, $left: null);
+		@include width-height(48px, 48px);
+		@include transform(rotateY(0deg));
+		&:hover, &:focus {
+			color: $white;
+		}
+	}
+	li{
+		&:last-child {
+			margin:40px 0 30px;
+		}
+		span {
+			opacity: 1;
+			@include width-height(0, 0);
+			display: inline-block;
+			@include transition-property(all);
+			@include transition-duration(0.3s);
+			@include transition-timing-function(ease-in);
+		}
+	}
+}
+.close-nav {
+	.left-nav {
+		width: 70px;
+	}
+	.top-nav {
+		padding-left: 90px;
+	}
+	.board-content {
+		padding-left: 70px;
+	}
+	.top-menu {
+		nav {
+			li {
+				a {
+					margin-bottom: 8px;
+					padding: 10px;
+					text-align: center;
+					&:before {
+						@include position(absolute, $top: 0, $right: null, $bottom: null, $left: 50%);
+						@include translateY(0);
+						@include translateX(-50%);
+					}
+					span {
+						display: block;
+						padding: 20px 0 0 0;
+					}
+				}
+			}
+		}		
+	}
+	.bottom-menu {
+		li {
+			a {
+				span {
+					opacity: 0;
+					@include width-height(0, 0);
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	.drawer-trigger {
+		@include position(absolute, $top: -60px, $right: 13px, $bottom: auto, $left: null);
+		@include transform(rotateY(180deg));
+	}
+	.logo-full {
+		opacity: 0;
+		@include width-height(0, 0);
+	}
+	.logo-icon {
+		opacity: 1;
+		@include width-height(auto, auto);
+	}
+	.logo {
+		padding: 20px 15px;
+	}
+}
+.close-drawer {
+	.left-nav {
+		width: 60px;
+	}
+	.top-nav {
+		padding-left: 85px;
+	}
+}
+
+/* tooltip animation */
+.tooltipCustom {
+  	position: relative;
+	&:before {
+		display: block;
+		opacity: 0;
+		pointer-events: none;
+		@include position(absolute, $top: 0px, $right: null, $bottom: null, $left: 55px);
+		background: $blue;
+		color: $white;
+		content: attr(data-title);
+		font-size: $font-xs;
+		font-weight: 400;
+		letter-spacing: 1px;
+		padding: 5px 10px;
+		white-space: nowrap;
+		transform: scale3d(.2,.2,1);
+		@include transition-property(all);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease-in-out);	
+	}
+}
+.close-nav {
+	.tooltipCustom {
+		&:hover:before {
+			opacity: 1;
+			transform: scale3d(1,1,1);
+		}
+	}
+}
+/* tooltip animation */
+
+.board {
+	&-content {
+		background-color: $greyBg;
+		padding: 84px 0 0 220px;
+		@include width-height(100%, 100vh);
+		overflow-y: auto;
+
+		@include transition-property(all);
+	    @include transition-duration(0.3s);
+	    @include transition-timing-function(ease-in);
+	}
+	&-inner {
+		padding: 20px;
+	}
+}

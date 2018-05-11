@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$relative-path}/fonts/line-awesome.eot?v=4.7.0');
+  src: url('#{$relative-path}/fonts/line-awesome.woff2?v=4.7.0') format('woff2'),
+       url('#{$relative-path}/fonts/line-awesome.woff?v=4.7.0') format('woff'),
+       url('#{$relative-path}/fonts/line-awesome.ttf?v=4.7.0') format('truetype'),
+       url('#{$relative-path}/fonts/line-awesome.svg#line-awesome') format('svg'),
+       url('#{$relative-path}/fonts/line-awesome.eot?#iefix&v=4.7.0') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "FontAwesome";
+    src: url('#{$relative-path}/fonts/line-awesome.svg#line-awesome') format('svg'),
+  }
+}
+
+
+
+

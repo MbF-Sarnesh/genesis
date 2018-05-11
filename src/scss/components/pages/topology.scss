@@ -1,0 +1,78 @@
+.topology{
+	&-issues{
+		h6{
+			color: $darkPurple;
+			font-family: $font-Montserrat;
+			font-size: $font-xs;
+			font-weight: 300;
+			letter-spacing: 1px;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 10px 0;
+		    width: 100%;
+		}
+		hr{
+			margin: 0 20px;
+		}		    
+		.portlet-body{
+			padding: 40px 0;
+			&-content{
+				padding: 45px 0 50px;
+				.graph-data {
+					padding: 20px 0;
+				}
+				p{
+					padding-bottom: 15px;
+				}
+			}
+		}
+		.traffic-row{
+			.portlet-body-content{
+				padding: 20px 0;
+			}
+		}
+	}
+	.issue-graph-data{
+		font-size: $font-lg3;
+		font-family: $font-Quicksand;
+		letter-spacing: 0.25px;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 10px 0;		
+	}	
+	.select-flex{
+		@include display-flex();
+	    justify-content: center;
+		.select-row{
+			position: relative;
+			padding-top: 30px;
+			right: 0;
+			.ui-selectmenu-menu{
+				position: absolute;
+				top: auto !important;
+				bottom: 25px !important;
+				left: 0;
+			} 
+		}
+	}
+	.mostactivetraffic-slide{
+		padding: 10px 20px 0px;
+		.slick-dots{
+			padding-top: 10px;
+		}
+	}
+	.board-middle-container
+	{
+		.row.vdivider .col:not(:last-child):after {
+			bottom: 20px
+		}	
+	}
+	&-image{
+		    padding: 45px 20px;
+	}
+	&-box{
+		.portlet-footer{
+			padding: 0;
+		}
+	}
+}

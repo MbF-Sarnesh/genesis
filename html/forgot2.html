@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Genesis Block | Forgot Password</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->	
+	<!-- Montserrat & Quicksand font included -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CQuicksand" rel="stylesheet">
+	<!-- font-family: 'Quicksand', sans-serif; font-family: 'Montserrat', sans-serif; -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<style>
+		body{
+			background-color: #fff;
+		}  
+		.render-blk{ opacity:0; }
+	</style>
+	<script>
+		var cssArr = ['css/app.css'];
+		for(var i = 0; i < cssArr.length; i++) {
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('type', 'text/css');
+			link.setAttribute('href', cssArr[i]);
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+	<noscript>
+		<style media="screen">
+			.render-blk{ opacity: 1; }	
+		</style>
+	</noscript>
+</head>
+	<body>
+		<div class="render-blk">
+			<header class="header-auth">
+				<a class="nav-link text-center" href="#!"><img class="logo-img" src="img/logo-full.png" alt="logo"></a>
+			</header>
+			<div class="auth-page">	
+				<span class="bg-pattern"></span>			
+				<div class="container auth-page-container">
+				 	<h1>Forgot your password?</h1>
+				    <div class="col-5 center-block ">
+			    		<div class="global-error-message">Your error message</div>
+
+				      	<div class="form-wrap card card-box padding-zero-bottom">
+					        <form id="sign-in-form" method="post">
+								<p>Enter your registered email address<br /> to reset your password</p>
+								<div class="form-row">
+									<label class="floating-item" data-error="Please enter email address">
+										<input type="email" name="email" class="floating-item-input input-item">
+										<span class="floating-item-label">Email address</span>
+									</label>
+									<div class="error-message" id="err_email"></div>
+								</div>
+								<div class="form-row">
+									<button class="button blue-lg">Reset Password</button>          
+								</div>
+								<div class="text-center cancel-form card-end">
+									<a  href="signin.html">Cancel</a>
+								</div>
+			            	</form>				            
+				    	</div>
+				 	</div>
+				</div>
+			</div>
+		</div>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+	  	<script >
+	  		//nprogress init
+	        NProgress.configure({ showSpinner: false }).start();
+	  	</script>
+	  	<script >
+		  	var jsArr = ['js/wow.js','js/app.js'];
+			for(var j = 0; j < jsArr.length; j++) {
+		        var script = document.createElement('script')
+		        script.setAttribute('type', 'text/javascript')
+		        script.setAttribute('src', jsArr[j])
+		        document.getElementsByTagName('head')[0].appendChild(script)
+		    }
+	    </script>
+	</body>
+</html>

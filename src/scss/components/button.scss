@@ -1,0 +1,40 @@
+.button, button{
+    background-color: $pictonblue;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font: {
+        family: $font-Montserrat;
+        size: $font-md;
+    };
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 0;
+    text-align:center;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    width: 100%;
+    @include border-radius(0);
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease-in);
+    &:hover, &:focus{
+        background-color: $button-hover;
+        color: $white;
+    }
+    &-primary{
+        max-width: inherit;
+        &:hover, &:focus{
+            background-color:transparent;
+            border-color: $pink;
+            color: $pink;
+        }
+    }
+}
+@media screen and(max-width: 640px){
+    .button, button{
+        font-size: 12px;
+        max-width: 190px;
+    }
+}
