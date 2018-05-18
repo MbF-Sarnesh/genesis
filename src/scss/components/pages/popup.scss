@@ -1,0 +1,64 @@
+.popup{
+	/*display: none;
+    z-index:999;
+    @include position(fixed, $top: 0, $right: 0, $bottom: 0, $left: 0);
+    width:100% !important;
+    height:100%;
+    overflow: auto;
+    background:rgba(0,0,0,0.75);*/
+    @include position(fixed,$top:0px,$right:0px,$bottom:0px,$left:0px);
+    z-index: 9000;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    transition: opacity 500ms;
+    opacity: 1;
+    overflow: auto;
+    &-inner{
+        @include position(absolute, $top: 50%, $right: null, $bottom: null, $left: 50%);
+        background: $white;      
+        transform: translate(-50%,-50%);
+        width: 80%;
+    }
+    &-close{
+        @include position(absolute, $top: -20px, $right: -15px, $bottom: null, $left: null);	    
+	    color: $white !important;	    	    	    
+        font-size:$font-lg;
+	    i{
+	      font-size:$font-lg;
+	    }
+    }
+    .embed-responsive{
+    	overflow: visible;
+        &-item{
+            margin: 0 auto;
+            padding: 0px;
+        }
+    }
+    &-trigger{
+        position: relative;
+        .fa-play{
+            color: $white;
+            @include position(absolute, $top: 50%, $right: null, $bottom: null, $left: 50%);
+            font-size: 40px;
+            @include transform(translate3d(-50%,-50%,0));
+        }
+    }    
+}
+.show-popup .popup {
+    opacity:1;
+    visibility: visible; 
+   
+}
+.y-hidden {
+  overflow-y: hidden; 
+}
+
+/*mobile*/
+@media screen and (max-width: $screen-xs-max) { 
+    .popup{
+        .embed-responsive{
+            /*width:100% !important;*/
+            height: 50%;
+        }   
+    }
+}

@@ -22,6 +22,8 @@ require("expose-loader?jqueryUi!../src/js/lib/jquery-ui.js");
 require("expose-loader?ripple!../src/js/lib/ripple.min.js");
 require("expose-loader?slick!../src/js/lib/slick.min.js");
 require("expose-loader?jQuery!../src/js/lib/jquery.validate.min.js");
+
+
 //require("expose-loader?wow!../src/js/lib/wow.min.js");
 // require('bootstrap');
 //////////////////  

@@ -16,8 +16,13 @@
 .main-content{
 	padding-top: 85px;
 	position: relative;
-	.home-banner{
-		@include position(absolute, $top: 0, $right: null, $bottom: null, $left: 0);
+	.home-banner,.home-banner-mob{
+		@include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+		width: 100%;
+	    height: 100vh;
+	}
+	.home-banner-mob{
+		display: none;
 	}
 	.tabs{
 		position: relative;
@@ -29,6 +34,7 @@
 	    color: white;
 	    @include border-radius(5px);
     	font-weight: bold;
+    	cursor:pointer;
     	&.current{
     		background-color: $white;
     		color: $black;
@@ -43,6 +49,10 @@
 .tab-content{
 	display: none;  	
 	width: 100%;	
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 50px;
 }
 
 .tab-content.current{
@@ -55,3 +65,35 @@ label{
 		color: $pink;
 	}
 } 
+.digi_time{
+	position: relative;
+    text-align: right;
+    color: #a74305;
+}
+.hidden{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 768px){
+	.tab-content{
+		padding: 15px;
+	}
+	.main-content{
+		.tab-link{
+			padding: 10px 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 640px){
+	.main-content{
+		.home-banner{			
+		    display: none;
+		}
+		.home-banner-mob{
+			display: block;			
+		}
+	}
+}
